@@ -1,3 +1,4 @@
+<% if items.any? %>
 <table id="task_table" class="table">
   <tbody>
   <% items.each do |item| %>
@@ -12,3 +13,9 @@
   <% end %>
   </tbody>
 </table>
+<% else %>
+  <p class="placeholder">There are no items yet.</p>
+<% end %>
+
+
+<%= link_to 'Add Item', routes.new_item_path %>

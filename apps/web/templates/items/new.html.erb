@@ -1,0 +1,19 @@
+<h2>Add Item</h2>
+
+<%=
+  form_for :item, '/items' do
+    div class: 'input' do
+      label      :title
+      text_field :title
+    end
+
+    div class: 'input' do
+      label      :price
+      text_field :price
+    end
+
+    div class: 'controls' do
+      submit 'Create Item'
+    end
+  end
+%>
