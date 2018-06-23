@@ -1,0 +1,16 @@
+/public/assets*
+/tmp
+.byebug_history
+
+# Ignore bundler config.
+/.bundle
+/vendor/bundle
+
+# RubyMine project files
+.idea
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
