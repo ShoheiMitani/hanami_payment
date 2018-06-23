@@ -10,4 +10,4 @@
 # post '/items', to: 'items#create'
 
 root to: 'items#index'
-resources :items, only: %i[index new create]
+resources :items, only: %i[index new create destroy]

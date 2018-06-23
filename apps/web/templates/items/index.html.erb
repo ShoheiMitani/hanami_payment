@@ -1,5 +1,13 @@
+<h2>商品一覧</h2>
+
+
 <% if items.any? %>
-<table id="task_table" class="table">
+<table id="task_table" class="table" border="1">
+  <tr>
+　　<th>商品名</th>
+　　<th>価格</th>
+    <th>削除</th>
+　</tr>
   <tbody>
   <% items.each do |item| %>
     <tr>
@@ -8,6 +16,13 @@
       </td>
       <td>
         <%= item.price %>
+      </td>
+      <td>
+        <%=
+          form_for :item, routes.item_path(item.id), method: :delete do
+            submit 'Delete'
+          end
+        %>
       </td>
     </tr>
   <% end %>
@@ -18,4 +33,4 @@
 <% end %>
 
 
-<%= link_to 'Add Item', routes.new_item_path %>
+<%= link_to '商品追加', routes.new_item_path %>
