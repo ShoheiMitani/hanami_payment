@@ -1,14 +1,14 @@
 <table id="task_table" class="table">
   <tbody>
-
+  <% items.each do |item| %>
     <tr>
       <td>
-        aaa
+        <%= item.title %>
       </td>
       <td>
-        aaa
+        <%= item.price %>
       </td>
     </tr>
-
+  <% end %>
   </tbody>
 </table>
